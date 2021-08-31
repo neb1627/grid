@@ -1,0 +1,23 @@
+#ThinkPython2   Exercise 3.3
+def do_alt(f):
+    f()
+
+def do_four(t):         #this feels like cheating
+    t()
+    t()
+    t()
+    t()
+
+def print_row():
+    print('+', '-', '-', '-', '-','+', '-', '-', '-', '-', '+')     #cheating
+    
+def print_columns():
+    print('|', '       ', '|', '       ', '|')
+
+x = 1
+while x <= 2:
+    do_alt(print_row)
+    do_four(print_columns)
+    x = x + 1
+
+do_alt(print_row)       #I can't find a better, stupid pattern
